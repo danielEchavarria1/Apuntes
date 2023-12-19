@@ -1,0 +1,25 @@
+atajos VSCode
+Ctrol + q = menu de opciones
+
+Ctrol + w =eliminar pestaña
+Ctrol + e = buscar archivo por nombre
+Ctrol+ r =abrir archivo
+Ctrol + i = palabras usadas en el codigo
+Ctrol + o =abrir archivo
+Ctrol + p = buscar archivo por nombre
+Ctrol + + =aumenta zoom
+Ctrol + - =Disminuir zoom
+Ctrol + l = seleccionar linea inferior
+Ctrol + } = comentar codigo
+Ctrol + ñ o j = terminal de consola
+Ctrol + h =buscar y remplazar palabras del codigo
+Ctrol + f = buscar palabra del codigo
+Ctrol + s = Guardar
+Ctrol + a = seleccionar todo el codigo
+Ctrol + z = volver
+Ctrol + x = cortar
+Ctrol + c = copiar
+Ctrol + v = pegar
+Ctrol + b = abrir o cerrar pestaña del explorador
+Ctrol + n = nuevo archivo
+Ctrol + , = menu de configuracion

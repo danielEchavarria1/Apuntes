@@ -1,0 +1,144 @@
+--Estos son solo algunos de los comandos básicos de Docker--
+
+1- docker pull nombre_imagen
+Descripción: Descarga una imagen de Docker desde Docker Hub u otro registro de imágenes. Por ejemplo, docker pull ubuntu descarga la imagen base de Ubuntu.
+
+2- docker images
+Descripción: Muestra una lista de todas las imágenes de Docker que están almacenadas localmente en tu máquina.
+
+3- docker ps
+Descripción: Muestra una lista de todos los contenedores que están en ejecución en este momento.
+
+4- docker ps -a
+Descripción: Muestra una lista de todos los contenedores, ya sea que estén en ejecución o detenidos.
+
+5- docker run nombre_imagen
+Descripción: Ejecuta un nuevo contenedor a partir de una imagen específica. Por ejemplo, docker run ubuntu ejecutará un contenedor basado en la imagen de Ubuntu.
+
+6- docker stop ID_contenedor
+Descripción: Detiene un contenedor en ejecución. Reemplaza ID_contenedor con el identificador único del contenedor.
+
+7- docker rm ID_contenedor
+Descripción: Elimina un contenedor. Debes detener el contenedor antes de poder eliminarlo. Reemplaza ID_contenedor con el identificador único del contenedor.
+
+8- docker rmi nombre_imagen
+Descripción: Elimina una imagen de Docker. Asegúrate de que no haya contenedores basados en la imagen que estás intentando eliminar.
+
+9- docker exec -it ID_contenedor comando
+Descripción: Ejecuta un comando dentro de un contenedor en ejecución. La opción -it permite interactuar con el contenedor. Reemplaza ID_contenedor con el identificador único del contenedor.
+
+10- docker-compose up
+Descripción: Levanta servicios definidos en un archivo docker-compose.yml. Útil para configurar y ejecutar aplicaciones compuestas por varios contenedores.
+
+
+--Estos comandos adicionales deberían ayudarte a tener un mayor control sobre tus contenedores y servicios de Docker--
+
+1- docker logs ID_contenedor
+Descripción: Muestra los registros (logs) de un contenedor específico. Reemplaza ID_contenedor con el identificador único del contenedor.
+
+2- docker inspect ID_contenedor
+Descripción: Muestra información detallada sobre un contenedor, incluyendo configuración, redes, volúmenes, etc. Reemplaza ID_contenedor con el identificador único del contenedor.
+
+3- docker network ls
+Descripción: Lista las redes de Docker disponibles en tu máquina.
+
+4 -docker volume ls
+Descripción: Lista los volúmenes de Docker disponibles en tu máquina.
+
+5- docker-compose down
+Descripción: Detiene y elimina los servicios definidos en un archivo docker-compose.yml, así como los contenedores asociados.
+
+6- docker exec -it ID_contenedor /bin/bash
+Descripción: Inicia una sesión interactiva de la shell dentro de un contenedor en ejecución. Reemplaza ID_contenedor con el identificador único del contenedor.
+
+7- docker build -t nombre_imagen ruta_directorio.
+Descripción: Construye una imagen de Docker a partir de un Dockerfile en una ubicación específica. Reemplaza nombre_imagen con el nombre deseado y ruta_directorio con la ruta del directorio que contiene el Dockerfile y los archivos necesarios.
+
+8- docker-compose build
+Descripción: Construye o reconstruye servicios definidos en un archivo docker-compose.yml. Útil cuando se realizan cambios en el Dockerfile o en los archivos de la aplicación.
+
+9- docker-compose ps
+Descripción: Muestra el estado de los servicios definidos en un archivo docker-compose.yml, incluyendo los contenedores asociados.
+
+
+
+--Estos comandos adicionales te proporcionarán más herramientas para gestionar y trabajar con contenedores Docker.--
+
+
+1- docker exec -it ID_contenedor /bin/sh
+Descripción: Similar a docker exec -it ID_contenedor /bin/bash, inicia una sesión interactiva de la shell dentro de un contenedor, pero utiliza /bin/sh en lugar de /bin/bash. Algunas imágenes pueden no tener bash instalado, pero generalmente incluyen sh.
+
+2- docker-compose up -d
+Descripción: Levanta servicios definidos en un archivo docker-compose.yml en modo "detached" (en segundo plano). Útil para ejecutar servicios sin bloquear la terminal.
+
+3- docker-compose logs servicio
+Descripción: Muestra los registros de un servicio específico definido en un archivo docker-compose.yml.
+
+4- docker-compose exec servicio comando
+Descripción: Ejecuta un comando dentro del servicio especificado en un archivo docker-compose.yml. Por ejemplo, docker-compose exec webserver ls ejecutará ls dentro del servicio llamado "webserver".
+
+5- docker inspect -f '{{.NetworkSettings.IPAddress}}' ID_contenedor
+Descripción: Devuelve la dirección IP asignada a un contenedor. Puede ser útil cuando necesitas saber la IP específica de un contenedor.
+
+6- docker-compose down -v
+Descripción: Detiene y elimina los servicios definidos en un archivo docker-compose.yml, así como los contenedores asociados y los volúmenes. La opción -v elimina los volúmenes asociados.
+
+7- docker-compose restart servicio
+Descripción: Reinicia un servicio específico definido en un archivo docker-compose.yml.
+
+8- docker system prune
+Descripción: Elimina todos los recursos no utilizados, como contenedores detenidos, redes no utilizadas y volúmenes sin asociar.
+
+9-docker info
+Descripción: Muestra información detallada sobre la configuración de Docker, incluyendo la versión, la cantidad de contenedores y más.
+
+10- docker network inspect nombre_red
+Descripción: Muestra información detallada sobre una red de Docker específica.
+
+...
+
+
+
+...
+
+Comandos de kubernetes
+22:58
+Kubernetes es una plataforma de código abierto diseñada para la automatización, implementación, escalado y operación de aplicaciones en contenedores. A continuación, se presentan algunos comandos comunes de Kubernetes que puedes utilizar a través de la línea de comandos (kubectl). Ten en cuenta que estos comandos pueden variar según la versión de Kubernetes y la configuración específica de tu clúster.
+
+Información del clúster:
+kubectl cluster-info: Muestra información sobre el clúster Kubernetes, como la dirección del servidor de Kubernetes y el estado de los nodos.
+
+Nodos:
+kubectl get nodes: Obtiene información sobre los nodos del clúster.
+kubectl describe node <nombre_del_nodo>: Muestra detalles específicos sobre un nodo.
+
+Pods:
+kubectl get pods: Obtiene información sobre los pods en el clúster.
+kubectl describe pod <nombre_del_pod>: Muestra detalles específicos sobre un pod.
+
+Despliegues:
+kubectl get deployments: Obtiene información sobre los despliegues en el clúster.
+kubectl describe deployment <nombre_del_despliegue>: Muestra detalles específicos sobre un despliegue.
+
+Servicios:
+kubectl get services: Obtiene información sobre los servicios en el clúster.
+kubectl describe service <nombre_del_servicio>: Muestra detalles específicos sobre un servicio.
+
+Registros y seguimiento:
+kubectl logs <nombre_del_pod>: Muestra los registros de un pod.
+kubectl logs -f <nombre_del_pod>: Muestra los registros en tiempo real.
+Ejecución de comandos en un contenedor:
+kubectl exec -it <nombre_del_pod> -- <comando>: Ejecuta un comando en un contenedor interactivo.
+
+Escalado:
+kubectl scale deployment <nombre_del_despliegue> --replicas=<número_de_replicas>: Escala un despliegue aumentando o disminuyendo el número de réplicas.
+Actualización de despliegues:
+kubectl set image deployment/<nombre_del_despliegue> <contenedor>=<imagen>:<etiqueta>: Actualiza la imagen de un contenedor en un despliegue.
+
+Eliminación:
+kubectl delete pod <nombre_del_pod>: Elimina un pod.
+kubectl delete deployment <nombre_del_despliegue>: Elimina un despliegue.
+kubectl delete service <nombre_del_servicio>: Elimina un servicio.
+Estos son solo algunos ejemplos básicos, y hay muchos otros comandos y opciones disponibles en Kubernetes. Puedes obtener más información sobre los comandos y sus opciones utilizando kubectl --help o consultando la documentación oficial de Kubernetes.
+...
+

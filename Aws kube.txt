@@ -1,0 +1,35 @@
+greenmovil-dev-eks
+
+aws eks update-kubeconfig --name greenmovil-dev-eks --region us-east-1
+
+
+kubectl get all 
+
+
+
+aws acceso a Credentials
+ejecuta estos comandos antes de ejecutar el kubectl get all
+CREDENTIALS=$(aws sts assume-role --role-arn arn:aws:iam::282560071038:role/EksCodeBuildKubectlRole --role-session-name codebuild-kubectl --duration-seconds 900)
+echo ${CREDENTIALS}
+export AWS_ACCESS_KEY_ID="$(echo ${CREDENTIALS} | jq -r '.Credentials.AccessKeyId')"
+export AWS_SECRET_ACCESS_KEY="$(echo ${CREDENTIALS} | jq -r '.Credentials.SecretAccessKey')"
+export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
+export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
+aws eks update-kubeconfig --name greenmovil-dev-eks --region us-east-1
+
+
+comando para tener acceso a kube con cloudShell de credenciales.
+
+ejecuta estos comandos antes de ejecutar el kubectl get all
+CREDENTIALS=$(aws sts assume-role --role-arn arn:aws:iam::282560071038:role/EksCodeBuildKubectlRole --role-session-name codebuild-kubectl --duration-seconds 900)
+echo ${CREDENTIALS}
+export AWS_ACCESS_KEY_ID="$(echo ${CREDENTIALS} | jq -r '.Credentials.AccessKeyId')"
+export AWS_SECRET_ACCESS_KEY="$(echo ${CREDENTIALS} | jq -r '.Credentials.SecretAccessKey')"
+export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
+export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
+aws eks update-kubeconfig --name greenmovil-dev-eks --region us-east-1
+
+
+PASO A PASO para abrir ver contenedores pods 
+-kubectl get all (permite visualizar los pods)
+-kubectl exec -it namePod sh

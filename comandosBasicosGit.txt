@@ -1,0 +1,124 @@
+--Estos son solo algunos comandos básicos de Git que te ayudarán a comenzar. --
+
+
+1- git init
+Descripción: Inicializa un nuevo repositorio Git en el directorio actual.
+
+2- git clone url_del_repositorio
+Descripción: Clona un repositorio remoto en tu máquina local. Reemplaza url_del_repositorio con la URL del repositorio en GitHub.
+
+3- git add nombre_del_archivo
+Descripción: Agrega un archivo específico al área de preparación (staging). Puedes usar . en lugar de nombre_del_archivo para agregar todos los archivos modificados.
+
+4- git commit -m "Mensaje del commit"
+Descripción: Realiza un commit con los cambios en el área de preparación. El mensaje describe los cambios realizados.
+
+5- git push origin nombre_de_la_rama
+Descripción: Sube los commits locales a la rama remota en GitHub. Reemplaza nombre_de_la_rama con el nombre de la rama.
+
+6- git pull origin nombre_de_la_rama
+Descripción: Obtiene los cambios desde GitHub y fusiona automáticamente en tu rama local. Ayuda a mantener tu rama actualizada.
+
+7-git status
+Descripción: Muestra el estado actual de tu repositorio, incluyendo los cambios no comprometidos.
+
+8- git branch
+Descripción: Muestra una lista de ramas locales y resalta la rama actual con un asterisco.
+
+9- git checkout nombre_de_la_rama
+Descripción: Cambia a la rama especificada. Puedes usar este comando para cambiar entre ramas existentes.
+
+10- git merge nombre_de_la_rama
+Descripción: Fusiona la rama especificada en la rama actual.
+
+11- git log
+Descripción: Muestra un registro de los commits realizados en el repositorio.
+
+12- git remote -v
+Descripción: Muestra las URL de los repositorios remotos asociados.
+
+13- git fetch
+Descripción: Obtiene cambios desde el repositorio remoto sin fusionarlos. Puedes usar git fetch origin para obtener cambios desde el repositorio remoto.
+
+
+--Estos comandos adicionales deberían proporcionarte más opciones y flexibilidad al trabajar con Git--
+
+1- git diff
+Descripción: Muestra las diferencias entre los cambios sin confirmar y la última confirmación.
+
+2- git branch nombre_nueva_rama
+Descripción: Crea una nueva rama en el repositorio.
+
+3- git remote add nombre_remoto url_del_repositorio
+Descripción: Agrega un nuevo repositorio remoto. Esto es útil cuando trabajas con múltiples repositorios remotos.
+
+4- git pull --rebase origin nombre_de_la_rama
+Descripción: Obtiene los cambios desde GitHub y aplica los commits locales sobre los cambios remotos, reescribiendo la historia del commit.
+
+5- git log --oneline
+Descripción: Muestra el historial de commits de forma resumida en una sola línea.
+
+6- git reset nombre_del_archivo
+Descripción: Quita un archivo específico del área de preparación sin descartar los cambios locales.
+
+7- git reset --hard HEAD
+Descripción: Resetea todos los cambios locales y el área de preparación a la última confirmación.
+
+8- git tag -a nombre_tag -m "Mensaje de la etiqueta"
+Descripción: Crea una etiqueta anotada en el commit actual.
+
+9- git remote show nombre_remoto
+Descripción: Muestra información detallada sobre un repositorio remoto.
+
+10- git log --graph --oneline --all
+Descripción: Muestra un gráfico ASCII que representa la historia del commit y las ramas.
+
+11- git stash
+Descripción: Guarda temporalmente los cambios locales sin realizar un commit. Útil cuando necesitas cambiar de rama rápidamente.
+
+12- git rebase nombre_de_la_rama
+Descripción: Aplica los cambios de la rama especificada sobre la rama actual. Puede reescribir la historia del commit.
+
+13- git cherry-pick ID_del_commit
+Descripción: Aplica un commit específico a la rama actual.
+
+--! Aquí tienes algunos comandos más avanzados y útiles en Git
+Estos comandos adicionales ofrecen funcionalidades más específicas y avanzadas en Git.:--
+
+1- git grep "texto_a_buscar"
+Descripción: Busca un texto específico en los archivos del repositorio.
+
+2- git bisect start
+Descripción: Inicia una búsqueda binaria para encontrar el commit que introdujo un problema.
+
+3- git bisect good ID_commit
+Descripción: Marca un commit como "bueno" durante la búsqueda binaria.
+
+4- git bisect bad ID_commit
+Descripción: Marca un commit como "malo" durante la búsqueda binaria.
+
+5- git reflog
+Descripción: Muestra un registro de referencias, útil para recuperar cambios perdidos.
+6- git log --author="nombre_del_autor"
+Descripción: Filtra el historial de commits por un autor específico.
+
+7- git log --grep="palabra_clave"
+Descripción: Filtra el historial de commits por un mensaje de commit que contenga una palabra clave específica.
+
+8- git log -p
+Descripción: Muestra los cambios introducidos en cada commit.
+
+9- git submodule add url_del_submodulo
+Descripción: Agrega un submódulo al repositorio.
+
+10- git submodule update --remote
+Descripción: Actualiza los submódulos a las últimas versiones.
+
+11-git cherry-pick -n ID_del_commit
+Descripción: Realiza una "cherry-pick" sin realizar el commit automáticamente, permitiendo ajustar los cambios antes de confirmar.
+12- git log --pretty=format:"%h - %an, %ar : %s"
+Descripción: Muestra el historial de commits en un formato personalizado.
+13- git remote rename nombre_antiguo nombre_nuevo
+Descripción: Cambia el nombre de un repositorio remoto.
+14- git clean -n
+Descripción: Muestra los archivos no rastreados que serán eliminados con git clean -f.

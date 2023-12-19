@@ -1,0 +1,38 @@
+COMANDOS BASICOS DE LA CONSOLA.
+
+Comandos para gestionar y acceder a archivos:
+Cd: Mueve entre carpetas.
+Dir:: Lista el contenido de un directorio.
+Copy: Copia archivos.
+Robocopy: Versión mejorada del comando de copia.
+Move: Mueve archivos.
+Del: Elimina archivos o contenido de carpetas.
+Rename : Renombra archivos.
+Format: Formatea una unidad de disco.
+Md: Crea carpetas.
+Tree: Muestra el árbol de directorios.
+Fc: Compara dos archivos o conjuntos de archivos y muestra las diferencias entre ellos
+Type <archivo.extensión>: Abre archivos de texto en CMD.
+Assoc <archivo.extensión>: Revela qué programa abre un determinado archivo en función a su extensión.
+Cipher: Permite sobrescribir espacio no utilizado en un disco, lo que puede dificultar la recuperación de archivos eliminados.
+
+Comandos para administrar y reparar el sistema:
+Systeminfo: Muestra información detallada del sistema.
+Ver: Muestra la versión de Windows.
+Time: Muestra y modifica la hora del sistema.
+Driverquery: Lista los controladores instalados.
+Tasklist: Muestra los procesos del sistema en ejecución.
+Taskkill /PID <nº ID del proceso>: Finaliza un proceso específico.
+Sfc: Examina y repara archivos de sistema. Comúnmente usado como "sfc /scannow".
+Cleanmgr: Ejecuta la herramienta Liberar espacio en disco.
+Powercfg: Herramienta para administrar el uso de energía en tu PC.
+Schtasks: Permitiendo programar tareas como reinicios, apagados, entre otros.
+Shutdown: Usado para apagar o reiniciar el ordenador, con opciones para programar estas acciones.
+Chkdsk: Herramienta para diagnosticar y reparar errores en discos.
+format: Se utiliza para formatear una unidad en tu ordenador.
+Comandos de red:
+Netstat: Muestra una lista de los puertos que están abiertos y las direcciones IP relacionadas.
+Ping: Envía paquetes de prueba a una dirección IP o dominio web para verificar la conectividad.
+Pathping: Similar al comando 'ping', pero también proporciona información sobre la ruta que toman los paquetes de prueba.
+IPconfig: Muestra la dirección IP actual de tu ordenador y tiene varias extensiones útiles.
+Tracert: Rastrea la ruta que toman los paquetes desde tu ordenador hasta una dirección IP o dominio objetivo.

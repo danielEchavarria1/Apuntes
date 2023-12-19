@@ -1,0 +1,2 @@
+Expresion regular para correos email
+^\w+([.\-_+]?[\w]+)*@\w+([.\-_]?\w+)*(\.\w{2,10})+$
